@@ -6,7 +6,7 @@ const Jobs = () => {
     const { data:jobsInfo, isLoading, isSuccess } = useQuery({
         queryKey: ['jobs'],
         queryFn: async () => {
-            const response = await fetch('http://localhost:5000/jobs')
+            const response = await fetch('http://localhost:5000/jobs/')
             return await response.json()
         },
     })
